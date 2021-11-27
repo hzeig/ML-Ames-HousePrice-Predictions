@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<html>
+	<body>
+		<h3> House Predictions - Machine Learning Project</h3>
+
+	<div>
+		<form action='/predict' method='POST'>
+			<label for='overallqu'>Overall Quality</label>
+			<input type='number' step='1' id='overallqu' name='overallqu'>
+			<br></br>
+			<label for='grlivarea'>Living Area</label>
+			<input type='number' step='100' id='grlivarea' name='grlivarea'>
+			<br></br>
+			<input type='submit' value='Submit'>
+			<br></br>
+			<br></br>
+			<h1> {{prediction}}</h1></body>
+
+	</html>
+
+{% endblock %}
